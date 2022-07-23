@@ -7,6 +7,85 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* Add styles here! */
+/* Design Tokens */
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+  --spacing-7: 96px;
+  --spacing-8: 128px;
+
+  --font-size-1: 1rem;
+  --font-size-2: 1.25rem;
+  --font-size-3: 1.5rem;
+  --font-size-4: 2rem;
+
+  --colors-primary: hsl(160deg, 100%, 30%);
+  --colors-secondary-light: hsl(45deg, 100%, 50%);
+  --colors-secondary-dark: hsl(45deg, 100%, 40%);
+  --colors-black: hsl(0deg, 0%, 0%);
+  --colors-very-dark: hsl(0deg, 0%, 10%);
+  --colors-dark: hsl(0deg, 0%, 30%);
+  --colors-medium: hsl(0deg, 0%, 40%);
+  --colors-light: hsl(0deg, 0%, 60%);
+  --colors-white: hsl(0deg, 0%, 100%);
+}
+
+/* Styles */
+
+.intro-chunk {
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-4);
+  max-width: 330px;
+}
+
+.intro-chunk strong {
+  color: var(--colors-primary);
+}
+
+.title {
+  font-size: var(--font-size-3);
+  margin-bottom: var(--spacing-4);
+}
+
+main {
+  border-top: 6px solid var(--colors-medium);
+  background-color: var(--colors-light);
+  padding-bottom: var(--spacing-6);
+}
+
+.card {
+  background-color: var(--colors-white);
+  border-bottom: 6px solid var(--colors-medium);
+  padding: var(--spacing-1) var(--spacing-3);
+  margin-top: var(--spacing-6);
+}
+
+.indented-heading {
+  background-color: var(--colors-secondary-light);
+  font-size: var(--font-size-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  max-width: max-content;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: calc(-1 * var(--spacing-4));
+  border-bottom: 6px solid var(--colors-secondary-dark);
+}
+
+header .max-width-wrapper {
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+}
+
+.max-width-wrapper {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
